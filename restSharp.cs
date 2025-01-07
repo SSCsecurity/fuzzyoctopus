@@ -20,7 +20,7 @@ var resp = restClient.Execute(req);
 
 
 
-var restClient = new RestClient("https://restapi.riscosity.com");
+var restClient = new RestClient("https://restapi.okta.com");
 
 var req = new RestRequest("/retrieve", Method.GET); signInRequest.AddQueryParameter("login",login);
    signInRequest.AddQueryParameter("password",password);
@@ -30,12 +30,12 @@ var req = new RestRequest("/retrieve", Method.GET); signInRequest.AddQueryParame
 IRestResponse resp = restClient.Execute(req);
 
 
-var restClient = new RestClient("https://api.gap.com/");
+var restClient = new RestClient("https://api.mastercard.com/");
 
 var jsonBody = new jObject();
 jsonBody.Add("Foo", "Bar");
 
-var req = new RestRequest("/jeans", Method.POST);
+var req = new RestRequest("/account-balance", Method.POST);
  req.AddHeader("x-api-key", token);
     req.AddHeader("x-api-user", user);
 req.AddParameter("application/json", jsonBody, ParameterType.RequestBody);
@@ -43,16 +43,16 @@ req.AddParameter("application/json", jsonBody, ParameterType.RequestBody);
 var resp = restClient.Execute(req);
 
 
-var restClient = new RestClient("https://oldnavy.com");
+var restClient = new RestClient("https://api.vodafone.com");
 
-var req = new RestRequest("/patcharoo", Method.PATCH);
+var req = new RestRequest("/ss7smstoken", Method.PATCH);
 
 req.AddJsonBody(param);
 
 var resp = restClient.Execute(req);
 
 
-var restClient = new RestClient("https://restapi.riscosity.com/testing");
+var restClient = new RestClient("https://restapi.cisco.com/siem");
 
 var jsonBody = new jObject();
 jsonBody.Add("Foo", "Bar");
@@ -64,9 +64,9 @@ req.AddParameter("application/json", jsonBody, ParameterType.RequestBody);
 var resp = restClient.Execute(req);
 
 
-var restClient = new RestClient("https://restapi.riscosity.com/testing");
+var restClient = new RestClient("https://restapi.cisco.com/siem");
 
-var req = new RestRequest("/something/delete", Method.DELETE);
+var req = new RestRequest("/log/delete", Method.DELETE);
 
 req.AddBody({dictionary})
 var resp = restClient.Execute(req);
